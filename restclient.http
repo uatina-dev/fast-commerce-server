@@ -1,0 +1,40 @@
+GET http://localhost:5000/
+###
+
+GET http://localhost:5000/snacks?snack=pizza
+###
+
+GET http://localhost:5000/orders/1
+###
+
+
+POST  http://localhost:5000/checkout/
+content-type: application/json
+
+{
+    "cart": [
+        {"id": 1, "quantity": 1},
+        {"id": 2, "quantity": 3},
+        {"id": 3, "quantity": 1}
+    ],
+    "customer": {
+        "fullName": "Uatina Morena Ruiva",
+        "email": "uatina@email.com",
+        "mobile": "33909093423",
+        "document": "41595425225",
+        "zipCode": "45670909",
+        "street": "Rua 9",
+        "number": "9",
+        "complement": "",
+        "neighborhood": "Recreio",
+        "city": "Rio de Janeiro",
+        "state": "RJ"
+    },
+    "payment": {
+        "creditCardNumber": "",
+        "creditCardHolder": "",
+        "creditCardExpiration": "",
+        "creditCardSecurityCode": ""
+    }
+}
+###
